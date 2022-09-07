@@ -1,5 +1,5 @@
 ﻿using System;
-using Models.Enums;
+using ProjetoVendas.Models.Enums;
 
 namespace ProjetoVendas.Models
 {

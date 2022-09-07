@@ -1,5 +1,5 @@
 ﻿
-namespace Models.Enums
+namespace ProjetoVendas.Models.Enums
 {
     public enum SaleStatus : int
     {

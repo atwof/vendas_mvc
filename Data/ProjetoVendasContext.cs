@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ProjetoVendas.Models;
 
+
     public class ProjetoVendasContext : DbContext
     {
         public ProjetoVendasContext (DbContextOptions<ProjetoVendasContext> options)
@@ -12,5 +13,7 @@ using ProjetoVendas.Models;
         {
         }
 
-        public DbSet<ProjetoVendas.Models.Department> Department { get; set; }
-    }
+        public DbSet<Department> Department { get; set; }
+        public DbSet<Seller> Seller { get; set; }
+        public SalesRecord SalesRecord { get; set; }
+}

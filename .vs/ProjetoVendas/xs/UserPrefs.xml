@@ -1,22 +1,19 @@
 ﻿<Properties StartupConfiguration="{F7A7E06A-6345-4393-B51C-51FAE0AA9714}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.ProjetoVendas PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/alissonf/Projects/ProjetoVendas/Controllers/SellersController.cs" relfile="Controllers/SellersController.cs" line="15" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/SellersController.cs">
     <Files>
       <File FileName="Views/Shared/_Layout.cshtml" Line="20" Column="56" />
-      <File FileName="Controllers/SellersController.cs" Line="15" Column="1" />
+      <File FileName="Controllers/SellersController.cs" Line="37" Column="10" />
       <File FileName="../../../../usr/local/share/dotnet/sdk/6.0.400/Microsoft.Common.CurrentVersion.targets" Line="4699" Column="5" />
       <File FileName="Views/Sellers/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Sellers/Create.cshtml" Line="32" Column="79" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProjetoVendas" expanded="True" selected="True">
+          <Node name="ProjetoVendas" expanded="True">
             <Node name="ProjetoVendas" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
@@ -26,6 +23,7 @@
                 <Node name="Enums" expanded="True" />
                 <Node name="ViewModels" expanded="True" />
               </Node>
+              <Node name="Services" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Sellers" expanded="True" />
               </Node>
@@ -38,6 +36,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ProjetoVendas PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

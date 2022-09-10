@@ -179,3 +179,4 @@
 /Users/alissonf/Projects/ProjetoVendas/obj/Debug/netcoreapp3.1/ProjetoVendas.genruntimeconfig.cache
 /Users/alissonf/Projects/ProjetoVendas/obj/Debug/netcoreapp3.1/Razor/Views/Sellers/Index.cshtml.g.cs
 /Users/alissonf/Projects/ProjetoVendas/obj/Debug/netcoreapp3.1/Razor/Views/Sellers/Create.cshtml.g.cs
+/Users/alissonf/Projects/ProjetoVendas/obj/Debug/netcoreapp3.1/Razor/Views/Sellers/Delete.cshtml.g.cs

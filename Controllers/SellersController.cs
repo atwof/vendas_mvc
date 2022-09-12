@@ -7,6 +7,7 @@ using ProjetoVendas.Services;
 using ProjetoVendas.Models;
 using ProjetoVendas.Models.ViewModels;
 using ProjetoVendas.Services.Exceptions;
+using System.Diagnostics;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -49,13 +50,13 @@ namespace ProjetoVendas.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "ID is null"});
             }
 
             var obj = _sellerService.FindById(id.Value);
             if (obj == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "ID not found" });
             }
 
             return View(obj);
@@ -73,13 +74,13 @@ namespace ProjetoVendas.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "ID is null" });
             }
 
             var obj = _sellerService.FindById(id.Value);
             if (obj == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "ID Not Found" });
             }
 
             return View(obj);
@@ -89,13 +90,13 @@ namespace ProjetoVendas.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "ID is null" });
             }
 
             var seller = _sellerService.FindById(id);
             if (seller == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "ID Not Found" });
             }
 
             List<Department> departments = _departmentService.FindAll();
@@ -109,7 +110,7 @@ namespace ProjetoVendas.Controllers
         {
             if (id != seller.Id)
             {
-                return BadRequest();
+                return RedirectToAction(nameof(Error), new { message = "ID mismatch" });
             }
 
             try
@@ -117,14 +118,21 @@ namespace ProjetoVendas.Controllers
                 _sellerService.Update(seller);
                 return RedirectToAction(nameof(Index));
             }
-            catch(NotFoundException ex)
+            catch(ApplicationException ex)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = ex.Message});
             }
-            catch(DbConcurrencyException ex)
+        }
+
+        public IActionResult Error(string message)
+        {
+            var viewModel = new ErrorViewModel
             {
-                return BadRequest();
-            }
+                Message = message,
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            };
+
+            return View(viewModel);
         }
     }
 }

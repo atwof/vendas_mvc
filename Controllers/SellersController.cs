@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProjetoVendas.Services;
 using ProjetoVendas.Models;
 using ProjetoVendas.Models.ViewModels;
+using ProjetoVendas.Services.Exceptions;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -82,6 +83,48 @@ namespace ProjetoVendas.Controllers
             }
 
             return View(obj);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var seller = _sellerService.FindById(id);
+            if (seller == null)
+            {
+                return NotFound();
+            }
+
+            List<Department> departments = _departmentService.FindAll();
+            SellerFormViewModel viewModel = new SellerFormViewModel { Seller = seller, Departments = departments};
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, Seller seller)
+        {
+            if (id != seller.Id)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                _sellerService.Update(seller);
+                return RedirectToAction(nameof(Index));
+            }
+            catch(NotFoundException ex)
+            {
+                return NotFound();
+            }
+            catch(DbConcurrencyException ex)
+            {
+                return BadRequest();
+            }
         }
     }
 }

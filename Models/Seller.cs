@@ -8,19 +8,26 @@ namespace ProjetoVendas.Models
     public class Seller
     {
         public int Id { get; set; }
+
+        [Required]
+        [StringLength(60, MinimumLength = 3, ErrorMessage = "{0} size must be between {2} and {1}")]
         public string Name { get; set; }
 
+        [Required]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
+        [Required]
+        [DataType(DataType.Date)]
         [Display(Name="Birth Date")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }
 
+        [Required]
         [Display(Name = "Base Salary")]
         [DisplayFormat(DataFormatString = "{0:F2}")]
         public double BaseSalary { get; set; }
+
         public Department Department { get; set; }
         public int DepartmentId { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();

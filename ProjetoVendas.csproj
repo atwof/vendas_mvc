@@ -15,6 +15,7 @@
     <None Remove="Views\Sellers\" />
     <None Remove="Services\" />
     <None Remove="Services\Exceptions\" />
+    <None Remove="Views\SalesRecords\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
@@ -32,5 +33,6 @@
     <Folder Include="Views\Sellers\" />
     <Folder Include="Services\" />
     <Folder Include="Services\Exceptions\" />
+    <Folder Include="Views\SalesRecords\" />
   </ItemGroup>
 </Project>

@@ -1,17 +1,12 @@
 ﻿<Properties StartupConfiguration="{F7A7E06A-6345-4393-B51C-51FAE0AA9714}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.ProjetoVendas PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Services/SellerService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/SalesRecords/SimpleSearch.cshtml">
     <Files>
-      <File FileName="Startup.cs" Line="53" Column="61" />
-      <File FileName="Models/Seller.cs" Line="26" Column="19" />
-      <File FileName="Views/Sellers/Create.cshtml" Line="46" Column="1" />
-      <File FileName="Views/Sellers/Edit.cshtml" Line="50" Column="2" />
-      <File FileName="Controllers/SellersController.cs" Line="140" Column="16" />
-      <File FileName="Services/DepartmentService.cs" Line="21" Column="26" />
-      <File FileName="Services/SellerService.cs" Line="45" Column="54" />
+      <File FileName="Services/SalesRecordService.cs" Line="20" Column="61" />
+      <File FileName="Data/ProjetoVendasContext.cs" Line="19" Column="5" />
+      <File FileName="Controllers/SalesRecordsController.cs" Line="37" Column="42" />
+      <File FileName="Views/SalesRecords/SimpleSearch.cshtml" Line="18" Column="96" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,14 +16,10 @@
               <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="ViewModels" expanded="True" />
-              </Node>
-              <Node name="Services" expanded="True">
-                <Node name="Exceptions" expanded="True" />
-              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Sellers" expanded="True" />
+                <Node name="SalesRecords" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True" />
             </Node>
@@ -40,7 +31,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ProjetoVendas PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
